@@ -914,6 +914,8 @@ textarea::placeholder {
 
   .continent {
     background-attachment: scroll;
+    background-size: 165% auto;
+    background-position: center 42%;
   }
 
   .topbar {
