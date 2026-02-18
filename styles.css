@@ -1,24 +1,16 @@
 @font-face {
-  font-family: "Aeonik";
-  src: url("assets/New Aeonik Trials/AeonikTRIAL-Light.otf") format("opentype");
+  font-family: "Geist";
+  src: url("assets/geist-font/Geist/webfonts/Geist%5Bwght%5D.woff2") format("woff2");
   font-style: normal;
-  font-weight: 300;
+  font-weight: 100 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Aeonik";
-  src: url("assets/New Aeonik Trials/AeonikTRIAL-Regular.otf") format("opentype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Aeonik";
-  src: url("assets/New Aeonik Trials/AeonikTRIAL-Bold.otf") format("opentype");
-  font-style: normal;
-  font-weight: 700;
+  font-family: "Geist";
+  src: url("assets/geist-font/Geist/webfonts/Geist-Italic%5Bwght%5D.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 100 900;
   font-display: swap;
 }
 
@@ -49,7 +41,7 @@ body {
   margin: 0;
   color: var(--text);
   background-color: #ffffff;
-  font-family: "Aeonik", sans-serif;
+  font-family: "Geist", sans-serif;
   line-height: 1.55;
 }
 
@@ -365,7 +357,7 @@ body.intro-active {
   border-radius: 50%;
   background: linear-gradient(150deg, var(--brand), var(--brand-2));
   color: #f9f6f0;
-  font-family: "Aeonik", sans-serif;
+  font-family: "Geist", sans-serif;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -465,7 +457,7 @@ nav a:hover {
 h1,
 h2,
 h3 {
-  font-family: "Aeonik", sans-serif;
+  font-family: "Geist", sans-serif;
   line-height: 1.12;
   margin: 0;
   color: var(--brand-2);
