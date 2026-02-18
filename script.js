@@ -341,6 +341,15 @@ function setupMobileProgramAccordion() {
     return;
   }
 
+  const getMobileHeadingText = (heading) => {
+    const mobileVariant = heading.querySelector(":scope > .mobile-only");
+    if (mobileVariant) {
+      return String(mobileVariant.textContent || "").trim();
+    }
+
+    return String(heading.textContent || "").trim();
+  };
+
   const candidates = document.querySelectorAll("#program-complet .card");
   const accordionCards = [];
 
@@ -359,7 +368,7 @@ function setupMobileProgramAccordion() {
       return;
     }
 
-    const titleText = String(heading.textContent || "").trim();
+    const titleText = getMobileHeadingText(heading);
     const trigger = document.createElement("button");
     trigger.type = "button";
     trigger.className = "program-accordion-trigger";
