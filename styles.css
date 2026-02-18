@@ -900,6 +900,20 @@ textarea::placeholder {
     display: none;
   }
 
+  #program-complet > .card {
+    margin-bottom: 1rem;
+  }
+
+  .experimental-module {
+    margin-top: 1rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .experimental-row {
+    gap: 1rem;
+  }
+
   .intro-overlay {
     padding: 1rem;
     display: flex;
