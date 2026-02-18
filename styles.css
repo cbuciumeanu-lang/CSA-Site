@@ -53,6 +53,14 @@ body {
   line-height: 1.55;
 }
 
+.desktop-only {
+  display: inline;
+}
+
+.mobile-only {
+  display: none;
+}
+
 body.intro-active {
   overflow: hidden;
 }
@@ -876,6 +884,22 @@ textarea::placeholder {
 }
 
 @media (max-width: 740px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline;
+  }
+
+  .mobile-hide-card {
+    display: none;
+  }
+
+  .mobile-hide-copy {
+    display: none;
+  }
+
   .intro-overlay {
     padding: 1rem;
     display: flex;
