@@ -1185,6 +1185,10 @@ textarea::placeholder {
     line-height: 1.03;
   }
 
+  .hero-title-word {
+    display: block;
+  }
+
   .hero-identity {
     display: grid;
     width: min(100%, calc(18rem - 3cm));
