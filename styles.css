@@ -1191,8 +1191,8 @@ textarea::placeholder {
 
   .hero-identity {
     display: grid;
-    width: min(100%, calc(18rem - 3cm));
-    max-width: calc(18rem - 3cm);
+    width: min(100%, calc(18rem - 2cm));
+    max-width: calc(18rem - 2cm);
     height: auto;
     min-height: 0;
     padding: 0.58rem 0.56rem 0.72rem;
