@@ -1169,8 +1169,18 @@ textarea::placeholder {
     gap: 0.62rem;
   }
 
+  .hero-title-group {
+    display: grid;
+    align-content: start;
+    gap: 0.24rem;
+  }
+
+  .hero-title-group .eyebrow {
+    line-height: 1.15;
+  }
+
   .hero-title-group h1 {
-    margin-top: 0.45rem;
+    margin-top: 0;
     font-size: clamp(1.5rem, 7vw, 2.1rem);
     line-height: 1.03;
   }
@@ -1189,6 +1199,8 @@ textarea::placeholder {
     align-content: space-between;
     gap: 0.3rem;
     overflow: hidden;
+    align-self: start;
+    margin-top: 1.38rem;
   }
 
   .hero-identity-logos {
