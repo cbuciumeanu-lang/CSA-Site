@@ -1164,7 +1164,7 @@ textarea::placeholder {
 
 @media (max-width: 740px) {
   .hero-top {
-    grid-template-columns: minmax(0, 1fr) minmax(126px, 41vw);
+    grid-template-columns: 1fr;
     align-items: start;
     gap: 0.62rem;
   }
@@ -1187,8 +1187,8 @@ textarea::placeholder {
 
   .hero-identity {
     display: grid;
-    width: 100%;
-    max-width: none;
+    width: min(100%, 18rem);
+    max-width: 18rem;
     height: auto;
     min-height: 0;
     padding: 0.48rem 0.56rem 0.58rem;
@@ -1200,7 +1200,7 @@ textarea::placeholder {
     gap: 0.3rem;
     overflow: hidden;
     align-self: start;
-    margin-top: 1.38rem;
+    margin-top: 0.3rem;
   }
 
   .hero-identity-logos {
