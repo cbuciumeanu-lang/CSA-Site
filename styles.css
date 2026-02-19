@@ -1191,13 +1191,13 @@ textarea::placeholder {
     max-width: calc(18rem - 3cm);
     height: auto;
     min-height: 0;
-    padding: 0.48rem 0.56rem 0.58rem;
+    padding: 0.58rem 0.56rem 0.72rem;
     border-radius: 14px;
     background: var(--brand-2);
     box-shadow: 0 10px 22px rgba(15, 59, 95, 0.22);
     justify-items: stretch;
     align-content: space-between;
-    gap: 0.3rem;
+    gap: 0.38rem;
     overflow: hidden;
     align-self: start;
     margin-top: 0.3rem;
@@ -1239,6 +1239,10 @@ textarea::placeholder {
     text-align: left;
     color: #ffffff;
     white-space: normal;
+  }
+
+  .hero-identity-date span {
+    white-space: nowrap;
   }
 
   .desktop-only {

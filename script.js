@@ -102,7 +102,8 @@ function fitHeroIdentityDate() {
   }
 
   const isDesktopWide = window.matchMedia("(min-width: 961px)").matches;
-  if (!isDesktopWide) {
+  const isMobileNarrow = window.matchMedia("(max-width: 740px)").matches;
+  if (!isDesktopWide && !isMobileNarrow) {
     dateElement.style.removeProperty("font-size");
     return;
   }
@@ -134,9 +135,9 @@ function fitHeroIdentityDate() {
     return;
   }
 
-  const targetWidth = Math.max(1, availableWidth * 0.985);
-  let low = 10;
-  let high = 220;
+  const targetWidth = Math.max(1, availableWidth * (isMobileNarrow ? 0.995 : 0.985));
+  let low = isMobileNarrow ? 9 : 10;
+  let high = isMobileNarrow ? 96 : 220;
   let best = low;
 
   while (low <= high) {
