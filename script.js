@@ -123,6 +123,8 @@ function fitHeroIdentityDate() {
   const style = window.getComputedStyle(dateElement);
   const fontFamily = style.fontFamily;
   const fontWeight = style.fontWeight;
+  const letterSpacing = Number.parseFloat(style.letterSpacing || "0");
+  const letterSpacingPx = Number.isFinite(letterSpacing) ? letterSpacing : 0;
   const canvas =
     fitHeroIdentityDate._canvas ||
     (() => {
@@ -135,7 +137,7 @@ function fitHeroIdentityDate() {
     return;
   }
 
-  const targetWidth = Math.max(1, availableWidth * (isMobileNarrow ? 0.995 : 0.985));
+  const targetWidth = Math.max(1, availableWidth * (isMobileNarrow ? 0.995 : 0.98));
   let low = isMobileNarrow ? 9 : 10;
   let high = isMobileNarrow ? 96 : 220;
   let best = low;
@@ -143,7 +145,11 @@ function fitHeroIdentityDate() {
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
     context.font = `${fontWeight} ${mid}px ${fontFamily}`;
-    const widestLine = lines.reduce((maxWidth, line) => Math.max(maxWidth, context.measureText(line).width), 0);
+    const widestLine = lines.reduce((maxWidth, line) => {
+      const textWidth = context.measureText(line).width;
+      const spacingWidth = Math.max(0, line.length - 1) * letterSpacingPx;
+      return Math.max(maxWidth, textWidth + spacingWidth);
+    }, 0);
 
     if (widestLine <= targetWidth) {
       best = mid;
