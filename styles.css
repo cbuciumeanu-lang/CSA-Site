@@ -77,6 +77,14 @@ body {
   display: none;
 }
 
+.desktop-only-block {
+  display: block;
+}
+
+.mobile-only-block {
+  display: none;
+}
+
 body.intro-active {
   overflow: hidden;
 }
@@ -926,6 +934,14 @@ textarea::placeholder {
 
   .mobile-only {
     display: inline;
+  }
+
+  .desktop-only-block {
+    display: none;
+  }
+
+  .mobile-only-block {
+    display: block;
   }
 
   .mobile-hide-card {
