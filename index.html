@@ -8,7 +8,7 @@
       name="description"
       content="INT-E - program postuniversitar de Intelligence Economic International. Curriculum, lectori, înscriere și contact."
     />
-    <link rel="stylesheet" href="styles.css?v=20260219-1" />
+    <link rel="stylesheet" href="styles.css?v=20260219-41" />
   </head>
   <body>
     <div class="intro-overlay" id="introOverlay" aria-hidden="true">
@@ -21,8 +21,10 @@
         <span class="intro-continent intro-continent-greenland"></span>
       </div>
       <div class="intro-copy">
-        <p class="intro-title">Intelligence Economic International</p>
-        <p class="intro-subtitle">Viitorul nu se prezice. Viitorul se navighează.</p>
+        <div class="intro-text-panel">
+          <p class="intro-title">Intelligence Economic International</p>
+          <p class="intro-subtitle">Viitorul nu se prezice. Viitorul se navighează.</p>
+        </div>
         <button class="intro-enter" id="introEnterBtn" type="button">Vezi mai mult</button>
       </div>
     </div>
@@ -39,8 +41,6 @@
     <header class="topbar">
       <a href="#acasa" class="brand">
         <span class="brand-mark">INT-E</span>
-        <img class="brand-logo brand-logo-ase" src="assets/Sigla ASE.png" alt="Sigla ASE" />
-        <img class="brand-logo brand-logo-csa" src="assets/sigla csa-alb.png" alt="Sigla CSA" />
       </a>
 
       <button class="menu-btn" id="menuBtn" aria-label="Deschide meniul">
@@ -58,22 +58,39 @@
 
     <main id="acasa">
       <section class="hero section reveal">
-        <p class="eyebrow">Program postuniversitar</p>
-        <h1>INTELLIGENCE ECONOMIC INTERNATIONAL</h1>
+        <div class="hero-top">
+          <div class="hero-title-group">
+            <p class="eyebrow">Program postuniversitar</p>
+            <h1>INTELLIGENCE ECONOMIC INTERNATIONAL</h1>
+          </div>
+          <aside class="hero-identity" aria-label="Identitate vizuală și interval">
+            <div class="hero-identity-logos">
+              <img
+                class="hero-identity-logo hero-identity-logo-ase"
+                src="assets/Sigla ASE.png"
+                alt="Sigla ASE"
+                loading="lazy"
+              />
+              <img
+                class="hero-identity-logo hero-identity-logo-csa"
+                src="assets/sigla csa-alb.png"
+                alt="Sigla CSA"
+                loading="lazy"
+              />
+            </div>
+            <p class="hero-identity-date"><span>10 APRILIE -</span><span>31 IUNIE 2026</span></p>
+          </aside>
+        </div>
         <p class="lead">
           O experiență educațională transdisciplinară care unește mediul academic cu realitatea
           economică, socială și geopolitică.
         </p>
         <div class="hero-meta">
           <div>
-            <span>Perioada de desfășurare</span>
-            <strong>10 aprilie - 31 iunie 2026</strong>
-          </div>
-          <div>
             <span>Format</span>
-            <strong>Ateliere + studii de caz + simulări</strong>
+            <strong>Prelegeri + Studii de caz + Simulari</strong>
           </div>
-          <div>
+          <div class="hero-meta-tuition">
             <span>Taxă școlarizare</span>
             <strong>5000 RON</strong>
           </div>
@@ -170,21 +187,6 @@
 
         <div class="grid cards-2">
           <article class="card">
-            <h3>INTELLIGENCE ECONOMIC INTERNATIONAL</h3>
-            <p>Program postuniversitar cu durata de 3 luni.</p>
-            <p>Perioadă publicată: 10 octombrie 2025 - 17 ianuarie 2026.</p>
-            <p>Academia de Studii Economice București.</p>
-          </article>
-
-          <article class="card mobile-hide-card">
-            <h3>Un studiu trans-disciplinar al domeniului de intelligence competitiv</h3>
-            <p>
-              Curs intensiv care creează o punte între sursele de cunoaștere din mediul academic și
-              realitatea economică, politică și socială.
-            </p>
-          </article>
-
-          <article class="card">
             <h3>Ce vei învăța pe durata INT-E</h3>
             <p>
               Să iei decizii informate, să accesezi instrumente complexe de analiză strategică a
@@ -202,6 +204,10 @@
               viitor; ești pasionat de geopolitică, strategie, gândire critică și design thinking.
             </p>
           </article>
+
+          <div class="cards-2-divider">
+            <h3>Domenii de Studiu</h3>
+          </div>
 
           <article class="card">
             <h3>Intelligence Competitiv</h3>
@@ -461,7 +467,7 @@
               <p>Intelligence competitiv și orientare strategică</p>
             </div>
           </article>
-          <article class="lecturer-card lecturer-card-irina">
+          <article class="lecturer-card">
             <img
               class="lecturer-photo"
               src="assets/Irina%20Dumitru.jpeg"
@@ -543,6 +549,6 @@
       <p>&copy; <span id="year"></span> Intelligence Economic International</p>
     </footer>
 
-    <script src="script.js?v=20260218-2"></script>
+    <script src="script.js?v=20260219-3"></script>
   </body>
 </html>

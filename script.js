@@ -95,6 +95,73 @@ if (menuBtn && mainNav) {
   });
 }
 
+function fitHeroIdentityDate() {
+  const dateElement = document.querySelector(".hero-identity-date");
+  if (!dateElement) {
+    return;
+  }
+
+  const isDesktopWide = window.matchMedia("(min-width: 961px)").matches;
+  if (!isDesktopWide) {
+    dateElement.style.removeProperty("font-size");
+    return;
+  }
+
+  const lines = Array.from(dateElement.querySelectorAll(":scope > span"))
+    .map((node) => String(node.textContent || "").trim())
+    .filter(Boolean);
+  if (!lines.length) {
+    return;
+  }
+
+  const availableWidth = dateElement.clientWidth;
+  if (availableWidth <= 0) {
+    return;
+  }
+
+  const style = window.getComputedStyle(dateElement);
+  const fontFamily = style.fontFamily;
+  const fontWeight = style.fontWeight;
+  const canvas =
+    fitHeroIdentityDate._canvas ||
+    (() => {
+      const node = document.createElement("canvas");
+      fitHeroIdentityDate._canvas = node;
+      return node;
+    })();
+  const context = canvas.getContext("2d");
+  if (!context) {
+    return;
+  }
+
+  const targetWidth = Math.max(1, availableWidth * 0.985);
+  let low = 10;
+  let high = 220;
+  let best = low;
+
+  while (low <= high) {
+    const mid = Math.floor((low + high) / 2);
+    context.font = `${fontWeight} ${mid}px ${fontFamily}`;
+    const widestLine = lines.reduce((maxWidth, line) => Math.max(maxWidth, context.measureText(line).width), 0);
+
+    if (widestLine <= targetWidth) {
+      best = mid;
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+
+  dateElement.style.fontSize = `${best}px`;
+}
+
+window.addEventListener("resize", fitHeroIdentityDate);
+window.addEventListener("load", fitHeroIdentityDate);
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(fitHeroIdentityDate).catch(() => {});
+}
+fitHeroIdentityDate();
+
 if (leadForm && formMessage) {
   leadForm.addEventListener("submit", (event) => {
     event.preventDefault();
