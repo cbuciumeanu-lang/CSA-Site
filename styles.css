@@ -1229,8 +1229,8 @@ textarea::placeholder {
   }
 
   .hero-identity-logo-csa {
-    width: calc(47% - 0.25rem + 0.5cm);
-    max-height: calc(54px + 0.5cm);
+    width: calc(47% - 0.25rem + 0.35cm);
+    max-height: calc(54px + 0.35cm);
     height: auto;
   }
 
