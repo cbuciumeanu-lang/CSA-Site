@@ -117,7 +117,7 @@
             font-size: 0.7rem;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .hero-title {
                 font-size: 2.4rem !important;
             }
@@ -125,6 +125,49 @@
             .mobile-padding {
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
+            }
+
+            #structura .module-card {
+                cursor: pointer;
+                padding: 1.25rem;
+            }
+
+            #structura .module-card > p:first-child {
+                margin-bottom: 0.5rem !important;
+            }
+
+            #structura .module-card > h3 {
+                margin-bottom: 0;
+                padding-right: 1.2rem;
+                position: relative;
+            }
+
+            #structura .module-card > h3::after {
+                content: "+";
+                color: #ffd700;
+                font-weight: 800;
+                line-height: 1;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            #structura .module-card.is-open > h3::after {
+                content: "−";
+            }
+
+            #structura .module-card > p:last-child {
+                display: none;
+                margin-top: 0.7rem;
+            }
+
+            #structura .module-card.is-open > p:last-child {
+                display: block;
+            }
+
+            #structura .module-card:focus-visible {
+                outline: 2px solid #ffd700;
+                outline-offset: 2px;
             }
         }
     </style>
@@ -234,52 +277,52 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">01</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Intelligence Competitiv</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Colectarea si analiza legala a informatiilor despre concurenta, piete si dinamici externe.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">02</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Analiza Strategica</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Evaluarea riscurilor si oportunitatilor in contexte economice complexe.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">03</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Gandire Critica</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Filtrarea informatiei prin rationament critic si design de solutii aplicate.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">04</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Early Warning</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Identificarea semnalelor slabe si anticiparea crizelor cu impact economic.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">05</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Geopolitica si Tehnologie</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Impactul infrastructurii digitale asupra balantei de putere globale.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">06</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Teopolitica Religiilor</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Rolul faliilor religioase in conflict, negociere si dinamica institutionala.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">07</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Psihologie Comportamentala</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Biasuri cognitive, influenta si modele de decizie in medii cu presiune ridicata.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">08</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Semiotica Aplicata</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Analiza discursului strategic, simbolurilor si intentiilor narative.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group">
+                <article class="glass-card module-card p-8 rounded-[2rem] group">
                     <p class="text-[#b8860b] font-black text-4xl mb-6 opacity-25 group-hover:opacity-100">09</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Strategii in Haos</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Decizie in incertitudine radicala prin scenarii extreme si matrici de risc.</p>
                 </article>
-                <article class="glass-card p-8 rounded-[2rem] group border border-[#b8860b]/45 bg-[#b8860b]/10 md:col-span-2 lg:col-span-3">
+                <article class="glass-card module-card p-8 rounded-[2rem] group border border-[#b8860b]/45 bg-[#b8860b]/10 md:col-span-2 lg:col-span-3">
                     <p class="text-[#ffd700] font-black text-4xl mb-6">10</p>
                     <h3 class="text-xl font-bold mb-3 text-white">Modul Experimental: Red Team vs Blue Team</h3>
                     <p class="text-slate-300 text-sm leading-relaxed">Simulare adversariala controlata pentru antrenarea reactiei strategice rapide in conditii de competitie reala.</p>
@@ -500,6 +543,56 @@
                 message.textContent = "Cererea a fost inregistrata (demo MVP). Te vom contacta in scurt timp.";
                 form.reset();
             });
+        })();
+
+        (function () {
+            var mq = window.matchMedia("(max-width: 767px)");
+            var cards = Array.prototype.slice.call(document.querySelectorAll("#structura .module-card"));
+            if (!cards.length) return;
+
+            var toggleCard = function (card) {
+                if (!mq.matches) return;
+                var isOpen = card.classList.toggle("is-open");
+                card.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            };
+
+            cards.forEach(function (card) {
+                card.addEventListener("click", function () {
+                    toggleCard(card);
+                });
+
+                card.addEventListener("keydown", function (event) {
+                    if (!mq.matches) return;
+                    if (event.key !== "Enter" && event.key !== " ") return;
+                    event.preventDefault();
+                    toggleCard(card);
+                });
+            });
+
+            var syncCardState = function () {
+                cards.forEach(function (card) {
+                    if (mq.matches) {
+                        card.setAttribute("role", "button");
+                        card.setAttribute("tabindex", "0");
+                        if (!card.classList.contains("is-open")) {
+                            card.setAttribute("aria-expanded", "false");
+                        }
+                        return;
+                    }
+
+                    card.classList.remove("is-open");
+                    card.removeAttribute("role");
+                    card.removeAttribute("tabindex");
+                    card.removeAttribute("aria-expanded");
+                });
+            };
+
+            syncCardState();
+            if (typeof mq.addEventListener === "function") {
+                mq.addEventListener("change", syncCardState);
+            } else if (typeof mq.addListener === "function") {
+                mq.addListener(syncCardState);
+            }
         })();
     </script>
 </body>
