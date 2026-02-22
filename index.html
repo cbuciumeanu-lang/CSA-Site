@@ -85,6 +85,16 @@
             .impact-section {
                 margin-top: -1.5cm;
             }
+            #lectori {
+                margin-top: -1.5cm;
+                margin-bottom: calc(8rem - 2cm);
+            }
+            #lectori > h2 {
+                margin-bottom: 2cm;
+            }
+            #inscriere > h2 {
+                margin-bottom: calc(3rem + 0.5cm);
+            }
         }
         @media (max-width: 767px) {
             #acasa {
@@ -122,6 +132,37 @@
             #viziune .mission-quote {
                 text-align: left !important;
                 padding-left: 0.5cm;
+            }
+            #structura .grid > .glass {
+                cursor: pointer;
+            }
+            #structura .grid > .glass > div:last-child > h3 {
+                position: relative;
+                margin-bottom: 0;
+                padding-right: 1.1rem;
+            }
+            #structura .grid > .glass > div:last-child > h3::after {
+                content: "+";
+                position: absolute;
+                right: 0;
+                top: 0;
+                color: #ffd700;
+                font-weight: 700;
+                line-height: 1;
+            }
+            #structura .grid > .glass.is-open > div:last-child > h3::after {
+                content: "−";
+            }
+            #structura .grid > .glass > div:last-child > p {
+                display: none;
+            }
+            #structura .grid > .glass.is-open > div:last-child > p {
+                display: block;
+                margin-top: 0.55rem;
+            }
+            #structura .grid > .glass:focus-visible {
+                outline: 2px solid #ffd700;
+                outline-offset: 2px;
             }
         }
     </style>
@@ -181,7 +222,7 @@
         <section id="viziune" class="mb-32">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl mb-6 border-l-4 border-[#b8860b] pl-6 serif italic text-[#ffd700]">Misiunea INTE</h2>
+                    <h2 class="text-3xl mb-6 border-l-4 border-[#b8860b] pl-6 serif italic text-[#ffd700]">Misiunea INT-E</h2>
                     <p class="mission-text text-base md:text-lg text-slate-400 leading-snug mb-5 text-justify">
                         Mediul economic global evoluează accelerat, într-un context marcat de complexitate,
                         incertitudine și competiție intensă. Informația a devenit principala resursă strategică,
@@ -204,7 +245,7 @@
 
 
         <section id="structura" class="mb-32">
-            <h2 class="inline-block text-4xl mb-16 text-center serif italic text-[#ffd700] border-l-4 border-[#b8860b] pl-6">Structura Programului INT-E</h2>
+            <h2 class="inline-block -mt-[1.5cm] text-4xl mb-16 text-center serif italic text-[#ffd700] border-l-4 border-[#b8860b] pl-6">Structura Programului INT-E</h2>
 
             <div class="grid gap-6">
                 <div class="glass p-6 rounded-xl flex items-start gap-6 card-hover transition-all duration-300">
@@ -290,13 +331,13 @@
         </section>
 
         <section id="lectori" class="mb-32">
-            <h2 class="inline-block text-4xl mb-16 text-center serif italic text-[#ffd700] border-l-4 border-[#b8860b] pl-6">Echipa Programului</h2>
+            <h2 class="inline-block mt-[0.5cm] text-4xl mb-16 text-center serif italic text-[#ffd700] border-l-4 border-[#b8860b] pl-6">Echipa Programului</h2>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/dumitru-bortun.png" alt="Dumitru Borțun" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Prof. univ. dr. Dumitru Borțun</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Gândire critică.</p>
                 </div>
@@ -304,7 +345,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/iulian-fota.webp" alt="Iulian Fota" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Dr. Iulian Fota</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Noua ordine mondială: tendințe, impact și perspective.</p>
                 </div>
@@ -312,7 +353,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/Cornel-Codita.jpg" alt="Cornel Codiță" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Prof. Univ. Dr. Cornel Codiță</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Noologie.</p>
                 </div>
@@ -320,7 +361,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/adriean-pirlog.jpg" alt="Adriean Pîrlog" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Adriean Pîrlog</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Intelligence aplicat și evaluarea riscurilor.</p>
                 </div>
@@ -328,7 +369,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/viorel-isticioaia.webp" alt="Viorel Isticioaia-Budura" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Amb. Viorel Isticioaia-Budura</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Geopolitică, Asia de Sud-Est.</p>
                 </div>
@@ -336,7 +377,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/iulian-chifu.jpeg" alt="Iulian Chifu" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Prof. dr. Iulian Chifu</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Sisteme de avertizare timpurie.</p>
                 </div>
@@ -344,7 +385,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/gabriel-micu.jpg" alt="Gabriel Micu" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Amb. Gabriel Micu</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Diplomație economică.</p>
                 </div>
@@ -352,7 +393,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/sebastian-grama.jpeg" alt="Sebastian Grama" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Conf. Univ. Dr. Sebastian Grama</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Semiotică și analiza discursului.</p>
                 </div>
@@ -360,7 +401,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/dan-cadar.jpeg" alt="Dan Cadar" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Dan Cadar</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Geopolitică și tehnologie.</p>
                 </div>
@@ -368,7 +409,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/marius-vasileanu.png" alt="Marius Vasileanu" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Marius Vasileanu</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Faliile religioase și impactul asupra geopoliticii contemporane.</p>
                 </div>
@@ -384,7 +425,7 @@
                 <div class="glass p-6 rounded-2xl border-white/5 profile-card text-center card-hover transition-all duration-300">
                     <img src="assets/catalin-buciumeanu.png" alt="Cătălin Buciumeanu" class="w-44 h-44 mx-auto rounded-full mb-6 border-2 border-white/10 profile-img" loading="lazy">
                     <h3 class="text-xl text-white">Cătălin Buciumeanu</h3>
-                    <p class="text-slate-400 text-sm uppercase tracking-wider mb-2">Lector</p>
+                    <p class="text-[#b8860b] text-sm uppercase tracking-wider mb-2">LECTOR</p>
                     <div class="w-12 h-0.5 bg-white/10 mx-auto my-4"></div>
                     <p class="text-slate-300 text-sm">Intelligence competitiv și orientare strategică.</p>
                 </div>
@@ -392,10 +433,10 @@
         </section>
 
         <section id="inscriere" class="mb-32">
-            <h2 class="inline-block text-4xl mb-12 text-center serif italic text-[#ffd700] border-l-4 border-[#b8860b] pl-6">Înscriere și Informații Administrative</h2>
+            <h2 class="inline-block mt-[0.5cm] text-4xl mb-12 text-center serif italic text-[#ffd700] border-l-4 border-[#b8860b] pl-6">Înscriere și Informații Administrative</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="glass p-8 rounded-2xl">
-                    <h3 class="text-2xl mb-5 text-white">Documente solicitate</h3>
+                    <h3 class="text-2xl mb-5 text-white">Dosar de înscriere</h3>
                     <ul class="space-y-3 text-slate-300 list-disc list-inside">
                         <li>Cerere de înscriere</li>
                         <li>CV</li>
@@ -418,6 +459,38 @@
                         <p>Email: <a href="mailto:info@int-e.ro" class="text-[#ffd700] hover:underline">info@int-e.ro</a></p>
                     </div>
                 </div>
+            </div>
+
+            <div class="glass p-8 rounded-2xl mt-8">
+                <h3 class="text-2xl mb-6 text-white">Trimite cererea de înscriere</h3>
+                <form id="leadForm" novalidate class="grid gap-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="nume" class="block text-sm uppercase tracking-wider text-[#ffd700] mb-1">Nume complet</label>
+                            <input id="nume" name="nume" type="text" required class="w-full rounded-xl border border-white/20 bg-[#10141b] px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-[#ffd700]" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm uppercase tracking-wider text-[#ffd700] mb-1">Email</label>
+                            <input id="email" name="email" type="email" required class="w-full rounded-xl border border-white/20 bg-[#10141b] px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-[#ffd700]" />
+                        </div>
+                        <div>
+                            <label for="telefon" class="block text-sm uppercase tracking-wider text-[#ffd700] mb-1">Telefon</label>
+                            <input id="telefon" name="telefon" type="tel" required class="w-full rounded-xl border border-white/20 bg-[#10141b] px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-[#ffd700]" />
+                        </div>
+                        <div>
+                            <label for="profil" class="block text-sm uppercase tracking-wider text-[#ffd700] mb-1">Profil profesional</label>
+                            <input id="profil" name="profil" type="text" placeholder="Consultanță / antreprenoriat / etc." class="w-full rounded-xl border border-white/20 bg-[#10141b] px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-[#ffd700]" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="mesaj" class="block text-sm uppercase tracking-wider text-[#ffd700] mb-1">Mesaj</label>
+                        <textarea id="mesaj" name="mesaj" rows="4" placeholder="Ce vrei să aprofundezi în INT-E?" class="w-full rounded-xl border border-white/20 bg-[#10141b] px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-[#ffd700]"></textarea>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <button class="cta-btn rounded-xl px-7 py-3 w-full sm:w-auto" type="submit">Trimite solicitarea</button>
+                        <p class="text-sm text-slate-300 min-h-[1.25rem]" id="formMessage" role="status" aria-live="polite"></p>
+                    </div>
+                </form>
             </div>
         </section>
 
@@ -469,6 +542,84 @@
             goTop();
             window.addEventListener("pageshow", goTop, { once: true });
             window.addEventListener("load", goTop, { once: true });
+        })();
+
+        (function () {
+            var leadForm = document.getElementById("leadForm");
+            var formMessage = document.getElementById("formMessage");
+            if (!leadForm || !formMessage) return;
+
+            leadForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                var data = new FormData(leadForm);
+                var hasRequired = ["nume", "email", "telefon"].every(function (field) {
+                    var value = data.get(field);
+                    return value && String(value).trim().length > 0;
+                });
+
+                if (!hasRequired) {
+                    formMessage.textContent = "Completează câmpurile obligatorii pentru a continua.";
+                    return;
+                }
+
+                formMessage.textContent = "Cererea a fost înregistrată (demo MVP). Te vom contacta în scurt timp.";
+                leadForm.reset();
+            });
+        })();
+
+        (function () {
+            var mobileMq = window.matchMedia("(max-width: 767px)");
+            var cards = Array.prototype.slice.call(document.querySelectorAll("#structura .grid > .glass"));
+            if (!cards.length) return;
+
+            var toggleCard = function (card) {
+                var isOpen = card.classList.toggle("is-open");
+                card.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            };
+
+            cards.forEach(function (card) {
+                if (card.dataset.dropdownBound === "1") return;
+                card.dataset.dropdownBound = "1";
+
+                card.addEventListener("click", function () {
+                    if (!mobileMq.matches) return;
+                    toggleCard(card);
+                });
+
+                card.addEventListener("keydown", function (event) {
+                    if (!mobileMq.matches) return;
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        toggleCard(card);
+                    }
+                });
+            });
+
+            var syncDropdownState = function () {
+                cards.forEach(function (card) {
+                    if (mobileMq.matches) {
+                        card.setAttribute("role", "button");
+                        card.setAttribute("tabindex", "0");
+                        if (!card.classList.contains("is-open")) {
+                            card.setAttribute("aria-expanded", "false");
+                        }
+                        return;
+                    }
+
+                    card.classList.remove("is-open");
+                    card.removeAttribute("role");
+                    card.removeAttribute("tabindex");
+                    card.removeAttribute("aria-expanded");
+                });
+            };
+
+            syncDropdownState();
+            if (typeof mobileMq.addEventListener === "function") {
+                mobileMq.addEventListener("change", syncDropdownState);
+            } else if (typeof mobileMq.addListener === "function") {
+                mobileMq.addListener(syncDropdownState);
+            }
         })();
     </script>
 </body>
