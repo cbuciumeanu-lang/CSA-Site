@@ -178,6 +178,72 @@
                 outline: 2px solid #ffd700;
                 outline-offset: 2px;
             }
+
+            #lectori .lecturer-card {
+                cursor: pointer;
+                text-align: left;
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                column-gap: 0.85rem;
+                row-gap: 0.2rem;
+                align-items: center;
+            }
+
+            #lectori .lecturer-card > img {
+                width: 4.4rem !important;
+                height: 4.4rem !important;
+                margin: 0 !important;
+                grid-column: 1;
+                grid-row: 1 / span 2;
+            }
+
+            #lectori .lecturer-card > h3 {
+                margin: 0;
+                padding-right: 1.2rem;
+                position: relative;
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            #lectori .lecturer-card > h3::after {
+                content: "+";
+                color: #ffd700;
+                font-weight: 800;
+                line-height: 1;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            #lectori .lecturer-card.is-open > h3::after {
+                content: "−";
+            }
+
+            #lectori .lecturer-card > p:nth-of-type(1) {
+                margin-top: 0.1rem;
+                margin-bottom: 0;
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            #lectori .lecturer-card > p:last-child {
+                display: none;
+                margin-top: 0.7rem;
+                padding-top: 0.7rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+                grid-column: 1 / -1;
+                grid-row: 3;
+            }
+
+            #lectori .lecturer-card.is-open > p:last-child {
+                display: block;
+            }
+
+            #lectori .lecturer-card:focus-visible {
+                outline: 2px solid #ffd700;
+                outline-offset: 2px;
+            }
         }
     </style>
 </head>
@@ -346,73 +412,73 @@
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/dumitru-bortun.png" alt="Dumitru Bortun" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Prof. univ. dr. Dumitru Bortun</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Gandire critica.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/iulian-fota.webp" alt="Iulian Fota" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Dr. Iulian Fota</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Noua ordine mondiala: tendinte, impact si perspective.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/Cornel-Codita.jpg" alt="Cornel Codita" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Prof. univ. dr. Cornel Codita</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Noologie.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/adriean-pirlog.jpg" alt="Adriean Pirlog" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Adriean Pirlog</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Intelligence aplicat si evaluarea riscurilor.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/viorel-isticioaia.webp" alt="Viorel Isticioaia-Budura" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Amb. Viorel Isticioaia-Budura</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Geopolitica, Asia de Sud-Est.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/iulian-chifu.jpeg" alt="Iulian Chifu" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Prof. dr. Iulian Chifu</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Sisteme de avertizare timpurie.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/gabriel-micu.jpg" alt="Gabriel Micu" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Amb. Gabriel Micu</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Diplomatie economica.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/sebastian-grama.jpeg" alt="Sebastian Grama" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Conf. univ. dr. Sebastian Grama</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Semiotica si analiza discursului.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/dan-cadar.jpeg" alt="Dan Cadar" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Dan Cadar</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Geopolitica si tehnologie.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/marius-vasileanu.png" alt="Marius Vasileanu" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Marius Vasileanu</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
                     <p class="text-sm text-slate-400 mt-4">Faliile religioase si impactul asupra geopoliticii contemporane.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card border border-[#b8860b]/50">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card border border-[#b8860b]/50">
                     <img src="assets/Irina-Dumitru.jpeg" alt="Irina Dumitru" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-[#b8860b]/50 object-[center_18%]" loading="lazy">
                     <h3 class="text-white font-bold">Irina Dumitru</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#ffd700] mt-2">Director de Program</p>
                     <p class="text-sm text-slate-300 mt-4">Coordonarea strategica si viziunea educationala a programului INT-E.</p>
                 </article>
-                <article class="glass-card p-6 rounded-3xl text-center profile-card">
+                <article class="glass-card p-6 rounded-3xl text-center profile-card lecturer-card">
                     <img src="assets/catalin-buciumeanu.png" alt="Catalin Buciumeanu" class="profile-img w-36 h-36 object-cover rounded-full mx-auto mb-5 border border-white/20" loading="lazy">
                     <h3 class="text-white font-bold">Catalin Buciumeanu</h3>
                     <p class="text-xs tracking-[0.2em] uppercase text-[#b8860b] mt-2">Lector</p>
@@ -512,6 +578,24 @@
 
     <script>
         (function () {
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            if (window.location.hash) {
+                history.replaceState(null, "", window.location.pathname + window.location.search);
+            }
+
+            var goTop = function () {
+                window.scrollTo(0, 0);
+            };
+
+            goTop();
+            window.addEventListener("pageshow", goTop);
+            window.addEventListener("load", goTop, { once: true });
+        })();
+
+        (function () {
             var menuButton = document.getElementById("mobileMenuButton");
             var menu = document.getElementById("mobileMenu");
             if (!menuButton || !menu) return;
@@ -557,6 +641,56 @@
         (function () {
             var mq = window.matchMedia("(max-width: 767px)");
             var cards = Array.prototype.slice.call(document.querySelectorAll("#structura .module-card"));
+            if (!cards.length) return;
+
+            var toggleCard = function (card) {
+                if (!mq.matches) return;
+                var isOpen = card.classList.toggle("is-open");
+                card.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            };
+
+            cards.forEach(function (card) {
+                card.addEventListener("click", function () {
+                    toggleCard(card);
+                });
+
+                card.addEventListener("keydown", function (event) {
+                    if (!mq.matches) return;
+                    if (event.key !== "Enter" && event.key !== " ") return;
+                    event.preventDefault();
+                    toggleCard(card);
+                });
+            });
+
+            var syncCardState = function () {
+                cards.forEach(function (card) {
+                    if (mq.matches) {
+                        card.setAttribute("role", "button");
+                        card.setAttribute("tabindex", "0");
+                        if (!card.classList.contains("is-open")) {
+                            card.setAttribute("aria-expanded", "false");
+                        }
+                        return;
+                    }
+
+                    card.classList.remove("is-open");
+                    card.removeAttribute("role");
+                    card.removeAttribute("tabindex");
+                    card.removeAttribute("aria-expanded");
+                });
+            };
+
+            syncCardState();
+            if (typeof mq.addEventListener === "function") {
+                mq.addEventListener("change", syncCardState);
+            } else if (typeof mq.addListener === "function") {
+                mq.addListener(syncCardState);
+            }
+        })();
+
+        (function () {
+            var mq = window.matchMedia("(max-width: 767px)");
+            var cards = Array.prototype.slice.call(document.querySelectorAll("#lectori .lecturer-card"));
             if (!cards.length) return;
 
             var toggleCard = function (card) {
