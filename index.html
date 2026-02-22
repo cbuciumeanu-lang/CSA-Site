@@ -434,9 +434,6 @@
 
     <script>
         (function () {
-            var isMobile = window.matchMedia("(max-width: 767px)").matches;
-            if (!isMobile) return;
-
             var hash = window.location.hash;
             var shouldForceTop = hash === "" || hash === "#inscriere" || hash === "#contact";
             if (!shouldForceTop) return;
