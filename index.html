@@ -427,5 +427,32 @@
         <p>© 2026 Intelligence Economic International (INT-E)</p>
         <p class="mt-2 uppercase tracking-widest text-xs opacity-50">Program postuniversitar</p>
     </footer>
+
+    <script>
+        (function () {
+            var isMobile = window.matchMedia("(max-width: 767px)").matches;
+            if (!isMobile) return;
+
+            var hash = window.location.hash;
+            var shouldForceTop = hash === "" || hash === "#inscriere" || hash === "#contact";
+            if (!shouldForceTop) return;
+
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            if (hash === "#inscriere" || hash === "#contact") {
+                history.replaceState(null, "", window.location.pathname + window.location.search);
+            }
+
+            var goTop = function () {
+                window.scrollTo(0, 0);
+            };
+
+            goTop();
+            window.addEventListener("pageshow", goTop, { once: true });
+            window.addEventListener("load", goTop, { once: true });
+        })();
+    </script>
 </body>
 </html>
