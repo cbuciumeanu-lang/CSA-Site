@@ -81,6 +81,27 @@
         h3 {
             font-weight: 700;
         }
+        @media (max-width: 767px) {
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+            #viziune {
+                order: 1;
+            }
+            #structura {
+                order: 2;
+            }
+            #lectori {
+                order: 3;
+            }
+            #inscriere {
+                order: 4;
+            }
+            .impact-section {
+                order: 5;
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -112,15 +133,15 @@
                 „Viitorul nu se prezice. Viitorul se navighează.”
             </p>
 
-            <div class="mt-8 flex flex-col lg:flex-row gap-6 justify-center items-center">
-                <div class="glass rounded-2xl px-[calc(1.5rem-0.25cm)] py-[calc(1.25rem-0.5cm)] md:px-[calc(2.5rem-0.75cm)] md:py-[calc(2rem-0.5cm)] min-h-[3.8cm] md:min-h-[5.8cm] min-w-[16rem] md:min-w-[22rem] flex items-center justify-center gap-[1px] md:gap-[1px]">
-                    <img src="assets/Sigla-ASE.png" alt="Sigla ASE" class="h-[3.9cm] md:h-[4.9cm] w-auto" loading="lazy">
-                    <img src="assets/sigla-csa-alb.png" alt="Sigla CSA" class="h-[3.7cm] md:h-[4.6cm] w-auto" loading="lazy">
+            <div class="mt-8 mx-auto flex w-full max-w-[22rem] md:max-w-none flex-row gap-2 md:gap-6 justify-center items-stretch">
+                <div class="glass rounded-2xl w-[calc(50%-0.25rem)] min-w-0 px-2 py-2 md:w-auto md:px-[calc(2.5rem-0.75cm)] md:py-[calc(2rem-0.5cm)] min-h-[2.7cm] md:min-h-[5.8cm] md:min-w-[22rem] flex items-center justify-center gap-[1px] md:gap-[1px]">
+                    <img src="assets/Sigla-ASE.png" alt="Sigla ASE" class="h-[1.8cm] md:h-[4.9cm] w-auto" loading="lazy">
+                    <img src="assets/sigla-csa-alb.png" alt="Sigla CSA" class="h-[1.65cm] md:h-[4.6cm] w-auto" loading="lazy">
                 </div>
-                <div class="glass rounded-2xl px-[calc(1.5rem-0.5cm)] py-5 md:px-[calc(2.5rem-0.5cm)] md:py-8 min-h-[3.8cm] md:min-h-[5.8cm] min-w-[16rem] md:min-w-[22rem] flex items-center justify-center text-center text-slate-300 text-lg md:text-[1.75rem] leading-snug tracking-wide">
+                <div class="glass rounded-2xl w-[calc(50%-0.25rem)] min-w-0 px-2 py-2 md:w-auto md:px-[calc(2.5rem-0.5cm)] md:py-8 min-h-[2.7cm] md:min-h-[5.8cm] md:min-w-[22rem] flex items-center justify-center text-center text-slate-300 text-sm md:text-[1.75rem] leading-snug tracking-normal md:tracking-wide">
                     <p class="flex w-full flex-col items-center leading-tight">
                         <span class="block w-full">10 APRILIE - 31 IUNIE</span>
-                        <span class="mt-2 flex w-full items-baseline justify-between text-[2.55em] md:text-[3.3em] leading-none tracking-normal font-black text-[#ffd700]">
+                        <span class="mt-1 md:mt-2 flex w-full items-baseline justify-between text-[2.1em] md:text-[3.3em] leading-none tracking-normal font-black text-[#ffd700]">
                             <span>2</span>
                             <span>0</span>
                             <span>2</span>
@@ -377,7 +398,7 @@
             </div>
         </section>
 
-        <section class="bg-[#b8860b] p-12 rounded-3xl text-black">
+        <section class="impact-section bg-[#b8860b] p-12 rounded-3xl text-black">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="serif text-3xl mb-8 italic">Impactul Strategic al Programului</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm uppercase tracking-wider">
